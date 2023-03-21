@@ -7,7 +7,6 @@ RUN apk update\
 
 COPY ./scripts/supervisord.conf /etc/supervisor/
 COPY ./scripts/openvpn.conf /etc/supervisor/conf.d/
-COPY ./scripts/entrypoint.sh /usr/bin/
 
-ENTRYPOINT ["/sbin/tini", "--", "/usr/bin/entrypoint.sh"]
+ENTRYPOINT ["/sbin/tini", "--", "/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]
 

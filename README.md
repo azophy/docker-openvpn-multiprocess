@@ -6,9 +6,11 @@ DRAFT: OPENVPN MULTIPROCESS DOCKER
 A template for building a web app inside container which connected to an OpenVPN network. This template based on https://github.com/dperson/openvpn-client and utilize supervisord to manage the process
 
 ## How to setup vpn
-1. prepare the vpn file
-2. encode it into base64 `cat example.conf | base64`
-3. enter the result into `VPN_CONFIG_FILE_CONTENT` inside `.env` file. see `.env.example`
+1. create a `vpn` folder inside this folder, then copy your `.ovpn` config file inside it
+2. its recommended to setup password file to avoid the password being logged into your console. steps:
+  2.a Create a new empty file in `vpn` folder, for example `pass.txt`
+  2.b Modify your `.ovpn` file by adding `askpass /vpn/pass.txt`. Notice that the path is the absolute path inside the container
+3. OpenVPN would automatically detect this config file and use it when you started the container
 
 ## How to add new project
 1. create a new folder inside this project

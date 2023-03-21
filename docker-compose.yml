@@ -16,10 +16,6 @@ services:
       - label:disable
     stdin_open: true
     tty: true
-    #ports:
-      #- "8888:8888"
-    env_file:
-      - .env
     volumes:
       - /dev/net:/dev/net:z
     # Put .ovpn configuration file in the /vpn directory (in "volumes:" above or
