@@ -1,5 +1,7 @@
-OPENVPN MULTIPROCESS DOCKER
+DRAFT: OPENVPN MULTIPROCESS DOCKER
 ===========================
+
+> Disclaimer: this repo is still a working project. containing errors, not yet functional
 
 A template for building a web app inside container which connected to an OpenVPN network. This template based on https://github.com/dperson/openvpn-client and utilize supervisord to manage the process
 
@@ -16,5 +18,5 @@ A template for building a web app inside container which connected to an OpenVPN
    [program:your_app_name]
    command=/path/to/your/executable --or-whatever-options
    ```
-3. copy or mount it into `/etc/supervisor/custom.conf.d`
+3. copy or mount it into `/etc/supervisor/custom.conf.d/` folder
 4. supervisord should automatically detect it and run the process the next time the container is restarted.
