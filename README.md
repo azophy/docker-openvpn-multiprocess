@@ -6,8 +6,8 @@ A template for building a web app inside container which connected to an OpenVPN
 ## How to setup vpn
 1. create a `vpn` folder inside this folder, then copy your `.ovpn` config file inside it
 2. its recommended to setup password file to avoid the password being logged into your console. steps:
-  2.a Create a new empty file in `vpn` folder, for example `pass.txt`
-  2.b Modify your `.ovpn` file by adding `askpass /vpn/pass.txt`. Notice that the path is the absolute path inside the container
+2.a Create a new empty file in `vpn` folder, for example `pass.txt`
+2.b Modify your `.ovpn` file by adding `askpass /vpn/pass.txt`. Notice that the path is the absolute path inside the container
 3. OpenVPN would automatically detect this config file and use it when you started the container
 
 ## How to add new project
