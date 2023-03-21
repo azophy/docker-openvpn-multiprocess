@@ -1,7 +1,5 @@
-DRAFT: OPENVPN MULTIPROCESS DOCKER
+OPENVPN MULTIPROCESS DOCKER
 ===========================
-
-> Disclaimer: this repo is still a working project. containing errors, not yet functional
 
 A template for building a web app inside container which connected to an OpenVPN network. This template based on https://github.com/dperson/openvpn-client and utilize supervisord to manage the process
 
